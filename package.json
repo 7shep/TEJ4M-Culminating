@@ -1,13 +1,1 @@
-{
-    "client_id": "23891eeee9ee42b8aaf68a066f0d525d",
-    "client_secret": "013fc4f179c849e389414f69dc73f619",
-    "access_token": "",
-    "dependencies": {
-        "axios": "^1.4.0",
-        "body-parser": "^1.20.2",
-        "curl": "^0.1.4",
-        "dotenv": "^16.1.4",
-        "express": "^4.18.2",
-        "qs": "^6.11.2"
-    }
-}
+
