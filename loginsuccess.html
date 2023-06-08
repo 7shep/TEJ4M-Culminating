@@ -4,9 +4,35 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Shep-FM</title>
 </head>
 <body>
+    <script>
+        window.onload = function() {
+            const currentURL = window.location.href;
+            console.log('Current URL:', currentURL);
+            
+            // Send the log data to the server
+            const logData = { log: 'Current URL: ' + currentURL };
+            fetch('http://127.0.0.1:5500/loginsuccess.html', {
+              method: 'POST',
+              headers: {
+                'Content-Type': 'application/json'
+              },
+              body: JSON.stringify(logData)
+            })
+            .then(response => {
+              if (response.ok) {
+                console.log('Log sent successfully');
+              } else {
+                console.error('Error sending log:', response.statusText);
+              }
+            })
+            .catch(error => {
+              console.error('Error sending log:', error);
+            });
+        };
+    </script>
     <h1>hfseh</h1>
 </body>
 </html>
