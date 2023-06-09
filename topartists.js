@@ -32,5 +32,4 @@ function topArtists(access_token) {
         });
 }
 
-topArtists(access_token);
 

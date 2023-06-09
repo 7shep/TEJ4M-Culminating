@@ -8,31 +8,31 @@
 </head>
 <body>
     <script>
-        window.onload = function() {
-            const currentURL = window.location.href;
-            console.log('Current URL:', currentURL);
-            
-            // Send the log data to the server
-            const logData = { log: 'Current URL: ' + currentURL };
-            fetch('http://127.0.0.1:5500/loginsuccess.html', {
-              method: 'POST',
-              headers: {
-                'Content-Type': 'application/json'
-              },
-              body: JSON.stringify(logData)
-            })
-            .then(response => {
-              if (response.ok) {
-                console.log('Log sent successfully');
-              } else {
-                console.error('Error sending log:', response.statusText);
-              }
-            })
-            .catch(error => {
-              console.error('Error sending log:', error);
-            });
-        };
+    window.onload = function () {
+      const currentURL = window.location.href;
+      console.log('Current URL:', currentURL);
+      
+      // Send the log data to the server
+      const logData = { log: 'Current URL: ' + currentURL };
+      fetch('http://127.0.0.1:5500/loginsuccess', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(logData)
+      })
+      .then(response => {
+        if (response.ok) {
+          console.log('Log sent successfully');
+        } else {
+          console.error('Error sending log:', response.statusText);
+        }
+      })
+      .catch(error => {
+        console.error('Error sending log:', error);
+      });
+    };
     </script>
-    <h1>hfseh</h1>
+    <p>fdsj</p>
 </body>
 </html>

@@ -14,7 +14,11 @@ data.use(bodyParser.urlencoded({extended: true}));
 data.get('/loginsuccess.html', async (req, res) => {
     console.log('here');
     res.redirect('http://127.0.0.1:5500/loginsuccess.html');
-    const logData = req.body.log;
-    console.log(logData);
+
+    const { currentURL } = req.body;
+    console.log(currentURL);
+    res.json({message: "URL Recieved"});
+
+
 });
 
